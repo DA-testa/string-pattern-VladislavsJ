@@ -3,7 +3,7 @@ def read_input():
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     StrOrFile=input()
     if StrOrFile[0] == 'F':
-        file_name = input()
+        file_name = './tests/06'
         #sys.path[0]+ "/tests/" + 
         with open(file_name, "r") as f:
             pattern = f.readline()

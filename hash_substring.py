@@ -1,7 +1,7 @@
 def read_input():
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
-    StrOrFile=input("Input from keyboard or file? (I/F)")
+    StrOrFile=input()
     if StrOrFile[0] == 'F':
         file_name = input()
         #sys.path[0]+ "/tests/" + 

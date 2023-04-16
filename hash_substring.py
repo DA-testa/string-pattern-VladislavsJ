@@ -9,7 +9,7 @@ def read_input():
             pattern = f.readline()
             text=f.readline()
     elif StrOrFile[0] == 'I':
-        print("pattern and text number:")
+        print()
         pattern = input()
         text = (input())
     # after input type choice

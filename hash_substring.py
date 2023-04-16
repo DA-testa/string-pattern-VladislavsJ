@@ -5,9 +5,9 @@ def read_input():
     if StrOrFile[0] == 'F':
         file_name = input()
         #sys.path[0]+ "/tests/" + 
-        text1 = (open(file_name, "r").read()).split("\n")
-        pattern = text1[0]
-        text=text1[1].split()
+        with open(file_name, "r") as f:
+            pattern = f.readline()
+            text=f.readline()
     elif StrOrFile[0] == 'I':
         print("pattern and text number:")
         pattern = input()
@@ -36,8 +36,8 @@ def get_occurrences(pattern, text):
         if HashText == patternHash:
             if text[i:i+patternLen] == pattern:
                 occurrences.append(i)
-            if i < textLen-patternLen:
-                HashText = (HashText - ord(text[i]))//256 + ord(text[i+patternLen])*256**(patternLen-1)
+        if i < textLen-patternLen:
+            HashText = hash(text[i+1:i+patternLen+1])
         
     return occurrences
     # this function should find the occurances using Rabin Karp alghoritm 
